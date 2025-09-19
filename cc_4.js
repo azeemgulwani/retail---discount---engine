@@ -7,3 +7,27 @@ const products = [
     {SKU : "SKU-004", name : "Towela", category : "household", price: 12.99, inventory: 7},
     {SKU : "SKU-005", name : "Charger", category : "electronics", price: 23.99, inventory: 9},
 ];
+
+// Step 3:
+// Step 3:
+for (let product of products) {
+    switch (product.category) {
+        case "electronics":
+            product.price *= 0.8;
+            break;
+
+        case "apparel":
+            product.price *= 0.85;
+            break;
+        
+        case "groceries": 
+        case "household":
+            product.price *= 0.90;
+            break;
+    
+        default:
+            product.price = 1;
+            break;
+    }
+};
+
