@@ -2,9 +2,9 @@
 
 const products = [
     {SKU : "SKU-001", name : "Wireless Mouse", category : "electronics", price: 29.99, inventory: 12},
-    {SKU : "SKU-002", name : "Tee", category : "apparel", price: 18.50, inventory: 15},
+    {SKU : "SKU-002", name : "Crew Neck Tee", category : "apparel", price: 18.50, inventory: 15},
     {SKU : "SKU-003", name : "Oats", category : "groceries", price: 5.99, inventory: 10},
-    {SKU : "SKU-004", name : "Towela", category : "household", price: 12.99, inventory: 7},
+    {SKU : "SKU-004", name : "Towel", category : "household", price: 12.99, inventory: 7},
     {SKU : "SKU-005", name : "Charger", category : "electronics", price: 23.99, inventory: 9},
 ];
 
@@ -31,6 +31,8 @@ for (let product of products) {
     }
 };
 
+
+
 // Step 4:
 let customerType = "";
 let extraDiscount = 0;
@@ -41,4 +43,11 @@ if (customerType === "student") {
 } else {
   extraDiscount = 0;
 }
+
+// Step 5:
+let customers = [
+  {name: "John Madison",customerType: "regular",purchases: ["Wireless Mouse", "Crew Neck Tee"]},
+  {name: "Avery Scott",customerType: "student",purchases: ["Oats", "Charger", "Crew Neck Tee"]},
+  {name: "Mina Patel",type: "senior",purchases: ["Towel", "Oats"]},
+];
 
