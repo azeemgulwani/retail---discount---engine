@@ -90,3 +90,9 @@ console.log("\n=== Inventory after all checkouts ===");
 for (const item of products) {
   console.log(`${item.name}: ${item.inventory} left`);
 }
+
+// Step 6:
+
+for (const key in products[1]) {
+  console.log(`${key}: ${products[1][key]}`);
+}
