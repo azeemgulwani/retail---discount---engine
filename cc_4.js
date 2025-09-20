@@ -73,9 +73,11 @@ for (const customer of customers) {
       if (item.name === purchase) {
         if (item.inventory > 0) {
           subtotal += item.price;
-          item.inventory--;   // reduce stock
+          item.inventory--;  
+        }  else {
+          console.log(`${item.name} is out of stock`);
         }
-        break; // stop searching once found
+        break; 
       }
     }
   }
