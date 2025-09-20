@@ -26,7 +26,7 @@ for (let product of products) {
             break;
     
         default:
-            product.price = 1;
+            product.price *= 1;
             break;
     }
 };
@@ -34,7 +34,7 @@ for (let product of products) {
 
 
 // Step 4:
-let customerType = "";
+let customerType = "regular";
 let extraDiscount = 0;
 if (customerType === "student") {
   extraDiscount = 0.05;
@@ -48,6 +48,6 @@ if (customerType === "student") {
 let customers = [
   {name: "John Madison",customerType: "regular",purchases: ["Wireless Mouse", "Crew Neck Tee"]},
   {name: "Avery Scott",customerType: "student",purchases: ["Oats", "Charger", "Crew Neck Tee"]},
-  {name: "Mina Patel",type: "senior",purchases: ["Towel", "Oats"]},
+  {name: "Mina Patel",customerType: "senior",purchases: ["Towel", "Oats"]},
 ];
 
