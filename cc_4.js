@@ -51,3 +51,35 @@ let customers = [
   {name: "Mina Patel",customerType: "senior",purchases: ["Towel", "Oats"]},
 ];
 
+
+let customerNumber = 0;
+
+for (const customer of customers) {
+  customerNumber++;
+  let subtotal = 0;
+
+  // figure out discount
+  if (customer.customerType === "student") {
+    extraDiscount = 0.05;
+  } else if (customer.customerType === "senior") {
+    extraDiscount = 0.07;
+  } else {
+    extraDiscount = 0;
+  }
+
+  // go through this customer's purchases
+  for (const purchase of customer.purchases) {
+    for (const item of products) {
+      if (item.name === purchase) {
+        if (item.inventory > 0) {
+          subtotal += item.price;
+          item.inventory--;   // reduce stock
+        }
+        break; // stop searching once found
+      }
+    }
+  }
+
+  let finalTotal = subtotal * (1 - extraDiscount);
+  console.log(`Customer ${customerNumber} (${customer.name}): $${finalTotal.toFixed(2)}`);
+}
