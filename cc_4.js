@@ -101,7 +101,6 @@ for (const key in products[1]) {
 
 for (const product of products) {
   console.log("\n---------------------------");
-  console.log(`Product: ${product.name}`);
   for (const [key, value] of Object.entries(product)) {
     console.log(`${key}: ${value}`);
   }
