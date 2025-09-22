@@ -87,17 +87,19 @@ for (const customer of customers) {
 }
 
 // Step 6:
+  console.log("\nLog Single Product's Key/Value Pair After Discount");
+  console.log("---------------------------");
 
 for (const key in products[1]) {
   console.log(`${key}: ${products[1][key]}`);
 }
 
 // Step 7:
-
+  console.log("\nLog All Products After Updated Inventory");
 for (const product of products) {
-  console.log("\n---------------------------");
+  console.log("---------------------------");
   for (const [key, value] of Object.entries(product)) {
     console.log(`${key}: ${value}`);
   }
 }
-console.log("\n---------------------------");
+console.log("---------------------------");
