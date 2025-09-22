@@ -86,11 +86,6 @@ for (const customer of customers) {
   console.log(`Customer ${customerNumber} (${customer.name}): $${finalTotal.toFixed(2)}`);
 }
 
-console.log("\n=== Inventory after all checkouts ===");
-for (const item of products) {
-  console.log(`${item.name}: ${item.inventory} left`);
-}
-
 // Step 6:
 
 for (const key in products[1]) {
